@@ -20,7 +20,8 @@ public class BellmanFordImplemenation {
 		}
 		dist[src] = 0;
 
-		
+		// Loop |v|-1 times, For each edge in the graph.
+		for (int k = 0; k < graph.length - 1; k++) {
 			// For each edge in the graph. 
 			for (int i = 0; i < graph.length; i++) {
 				for (int j = 0; j < graph.length; j++) {
@@ -33,7 +34,7 @@ public class BellmanFordImplemenation {
 					}
 				}
 			}
-		
+		}
 		// Check if there is a negative cycle, loop the edges.
 		for (int i = 0; i < graph.length; i++) {
 			// For each edge in the graph.
